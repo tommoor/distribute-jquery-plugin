@@ -34,7 +34,7 @@
          m = 0; // last in a row, dont give a margin.
        }
 
-       $(this).css('margin-right', m + 'px');
+       $(this).css('margin-right', m + 'px').css('display', 'inline-block');
      });
   });
 
