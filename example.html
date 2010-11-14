@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="jQuery Distribute plugin"/>
+    <title>jQuery Distribute Example</title>
+    
+    <style>
+      body { 
+        font-family: Arial;
+      }  
+			h1 {
+				font-family: Geneva, ‘Lucida Sans’, ‘Lucida Grande’, ‘Lucida Sans Unicode’, Verdana, sans-serif;
+				font-weight: normal;
+				border-bottom: 1px solid #666;
+			}
+      ul { 
+		    margin: 10px; 
+		    padding: 0; 
+		    min-width: 100px; 
+      }
+    	.box {
+    		width: 100px;
+    		height: 100px;
+    		background: #E4F2FF;
+    		margin-bottom: 10px;	
+      }
+    </style>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+		<script src="http://github.com/tommoor/distribute-jquery-plugin/raw/master/jquery.distribute.min.js"></script>
+		<script>
+			$(function(){
+			
+				$(window).resize(function(){
+					$('#boxes').distribute();
+				});
+
+				$('#boxes').distribute();
+			});
+		</script>
+  </head>
+  <body>
+    <h1>jQuery Distribute Demo</h1>
+    <p>Resize window to see plugin in action.</p>
+    <ul id="boxes">
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    	<li class="box"></li>
+    </ul>
+  </body>
+</html>
