@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="jQuery Distribute plugin examples"/>
+    <title>jQuery Distribute Example</title>
+    
+    <link rel="stylesheet" href="style.css" type="text/css"  /> 
+  </head>
+  <body>
+    <h1>jQuery Distribute Plugin</h1>
+    
+    <p>Whipped up in a very short period of time for <a href="http://stitchd.com">stitchd</a>, the idea behind this plugin is to evenly distribute child elements horizontally across fluid css layouts.</p>
+    <p>A table doesn't quite do the job for this as:</p>
+    
+    <ul>
+    	<li>a) the contents may not be tabular data</li>
+    	<li>b) you want the left and right edges to neatly align with your layout, which a table with centered cells would not allow</li>
+    </ul>
+    
+    
+    <h2>Demo</h2>
+    
+    <p>The example loads in a new window so that it is easily resized to see the plugin in action.</p>
+		<p><a href="javascript:window.open('example.html','jQuery Distribute Plugin','width=600,height=600');">Click here to see the demo</a></p>
+		
+		
+    <h2>How to use</h2>
+
+    <p>You need to tell the plugin when to update the positioning of elements so at a minimum i would suggest triggering it at page load and on window resizes, like so:</p>
+    
+    <ol class="code">
+    	<li>
+    	  <code>
+$(window).resize(function(){
+	$('#boxes').distribute();
+});
+
+$('#boxes').distribute();
+				</code>
+		  </li>
+    </ol>
+    
+    <p>There are currently only two options for this plugin.</p>
+    
+    <h4><code>margin</code></h4>
+    
+    <p>This allows you to set a minimum margin between elements</p>
+    
+    <ol class="code">
+    	<li>
+    	  <code>
+$('#boxes').distribute({'margin': 20});
+				</code>
+		  </li>
+    </ol>
+    
+    <h4><code>width</code></h4>
+    
+    <p>You can also explicitely set the width of child elements, otherwise the plugin will use the width of the first element. This behaviour may be enhanced in the future.</p>
+    
+    <ol class="code">
+    	<li>
+    	  <code>
+$('#boxes').distribute({'width': 200});
+				</code>
+		  </li>
+		</ol>
+		
+	  <h3>Download</h3>
+	  
+	  <p>The plugin can be downloaded from the <a href="http://github.com/tommoor/distribute-jquery-plugin">public repository on github</a>.</p>
+	  
+	  <h3>Contact</h3>
+	  
+	  <p>If you have any comments you can find me <a href="http://twitter.com/tommoor">@tommoor on twitter</a></p>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1703053-16']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
